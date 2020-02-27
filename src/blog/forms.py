@@ -11,10 +11,11 @@ class BlogPostModelForm(forms.ModelForm):
     # title = forms.CharField() -> use this to override the type of field in the model
     class Meta:
         model = BlogPost
-        fields = ["title", "slug", "content"]
+        fields = ["title", "image", "slug", "content", "publish_date"]
 
     def clean_title(self, *args, **kwargs):
         instance = self.instance
+        print(instance)
         title = self.cleaned_data.get("title")
         qs = BlogPost.objects.filter(title__iexact=title)
         if instance is not None:

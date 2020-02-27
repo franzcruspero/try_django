@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/home/franz/.local/share/virtualenvs/try_django-89dmMnhs/bin/python"
+    "python.pythonPath": "/home/franz/.local/share/virtualenvs/try_django-89dmMnhs/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }

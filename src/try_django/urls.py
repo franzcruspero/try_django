@@ -17,6 +17,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, re_path, include
 
+from searches.views import search_view
 from blog.views import (
     blog_post_create_view,
 )
@@ -33,6 +34,7 @@ urlpatterns = [
     path('', home_page),
     path('blog-new/', blog_post_create_view),
     path('blog/', include('blog.urls')),
+    path('search/', search_view),
     # re_path(r'^blog/(?P<slug>\w+)/$', blog_post_detail_page),
     path('about/', about_page),
     re_path(r'^pages?/$', about_page), #-> this is equivalent to path('pages/', about_page) and path('page/', about_page)

@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 pillow = "*"
-django = "==2.2"
+django = "==2.2.21"
 pylint = "*"
 pylint-django = "*"
 
